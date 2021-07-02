@@ -15,8 +15,12 @@ namespace Dmx
 
         private void Start()
         {
-            this.ObserveEveryValueChanged(view => view.fps).Subscribe(f => OnChangeFps.OnNext(f));
-            this.ObserveEveryValueChanged(view => view.dmxData).Subscribe(data => OnChangeDmxData.OnNext(data));
+            this.ObserveEveryValueChanged(view => view.fps)
+                .Subscribe(f => OnChangeFps.OnNext(f))
+                .AddTo(this);
+            this.ObserveEveryValueChanged(view => view.dmxData)
+                .Subscribe(data => OnChangeDmxData.OnNext(data))
+                .AddTo(this);
         }
 
         private void OnDestroy()
