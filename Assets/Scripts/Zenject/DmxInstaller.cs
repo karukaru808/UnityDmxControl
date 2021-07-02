@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Zenject
 {
-    public class DmxInstaller : MonoInstaller
+    public sealed class DmxInstaller : MonoInstaller
     {
         [SerializeField] private GameObject dmxControlViewPrefab;
 
