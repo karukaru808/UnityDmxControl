@@ -57,6 +57,7 @@ namespace Dmx
 
         public void Dispose()
         {
+            _tokenSource?.Cancel();
             _serialPort?.Close();
             _serialPort?.Dispose();
         }
