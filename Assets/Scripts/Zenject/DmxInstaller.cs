@@ -1,8 +1,7 @@
 using Dmx;
 using UnityEngine;
-using Zenject;
 
-namespace CIFER.Tech.Scripts.Zenject
+namespace Zenject
 {
     public class DmxInstaller : MonoInstaller
     {
