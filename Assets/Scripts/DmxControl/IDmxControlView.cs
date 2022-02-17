@@ -1,6 +1,6 @@
 ﻿using UniRx;
 
-namespace Dmx
+namespace DmxControl
 {
     public interface IDmxControlView
     {

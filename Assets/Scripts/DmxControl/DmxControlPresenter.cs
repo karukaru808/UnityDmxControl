@@ -2,7 +2,7 @@
 using UniRx;
 using Zenject;
 
-namespace Dmx
+namespace DmxControl
 {
     public sealed class DmxControlPresenter : IInitializable, IDisposable
     {

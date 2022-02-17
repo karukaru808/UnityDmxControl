@@ -1,7 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 
-namespace Dmx
+namespace DmxControl
 {
     public sealed class DmxControlView : MonoBehaviour, IDmxControlView
     {

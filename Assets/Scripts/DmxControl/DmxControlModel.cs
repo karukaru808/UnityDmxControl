@@ -3,7 +3,7 @@ using System.IO.Ports;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 
-namespace Dmx
+namespace DmxControl
 {
     public sealed class DmxControlModel : IDisposable
     {
