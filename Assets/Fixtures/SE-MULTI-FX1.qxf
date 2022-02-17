@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE FixtureDefinition>
+<FixtureDefinition xmlns="http://www.qlcplus.org/FixtureDefinition">
+ <Creator>
+  <Name>Q Light Controller Plus</Name>
+  <Version>4.12.3</Version>
+  <Author>karukaru</Author>
+ </Creator>
+ <Manufacturer>SE</Manufacturer>
+ <Model>MULTI FX1</Model>
+ <Type>Color Changer</Type>
+ <Channel Name="Red" Preset="IntensityRed"/>
+ <Channel Name="Green" Preset="IntensityGreen"/>
+ <Channel Name="Blue" Preset="IntensityBlue"/>
+ <Channel Name="UV" Preset="IntensityUV"/>
+ <Channel Name="Channel_5">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="5">Black Out</Capability>
+  <Capability Min="6" Max="250" Preset="SlowToFast">Strobe</Capability>
+  <Capability Min="251" Max="255">Sound Active</Capability>
+ </Channel>
+ <Channel Name="Channel_6">
+  <Group Byte="0">Colour</Group>
+  <Capability Min="0" Max="5" Preset="ColorMacro" Res1="#000000">Black Out</Capability>
+  <Capability Min="6" Max="21" Preset="ColorMacro" Res1="#ff0000">Red</Capability>
+  <Capability Min="22" Max="37" Preset="ColorMacro" Res1="#00ff00">Green</Capability>
+  <Capability Min="38" Max="53" Preset="ColorMacro" Res1="#0000ff">Blue</Capability>
+  <Capability Min="54" Max="69" Preset="ColorMacro" Res1="#ffff00">Yellow</Capability>
+  <Capability Min="70" Max="101" Preset="ColorMacro" Res1="#ff00ff">Magenta</Capability>
+  <Capability Min="102" Max="117" Preset="ColorMacro" Res1="#00ffff">Cyan</Capability>
+  <Capability Min="118" Max="133" Preset="ColorMacro" Res1="#ffffff">White</Capability>
+  <Capability Min="134" Max="149">Auto 1 / Sound 1</Capability>
+  <Capability Min="150" Max="165">Auto 2 / Sound 2</Capability>
+  <Capability Min="166" Max="181">Auto 3 / Sound 3</Capability>
+  <Capability Min="182" Max="197">Auto 4 / Sound 4</Capability>
+  <Capability Min="198" Max="213">Auto 5 / Sound 5</Capability>
+  <Capability Min="214" Max="229">Auto 6 / Sound 6</Capability>
+  <Capability Min="230" Max="245">Auto 7 / Sound 7</Capability>
+  <Capability Min="246" Max="255">Auto 8 / Sound 8</Capability>
+ </Channel>
+ <Channel Name="Channel_7">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="250" Preset="SlowToFast">Strobe / Progran Speed</Capability>
+  <Capability Min="251" Max="255">Sound Active</Capability>
+ </Channel>
+ <Channel Name="Channel_8">
+  <Group Byte="0">Colour</Group>
+  <Capability Min="0" Max="5" Preset="ColorMacro" Res1="#000000">Black Out</Capability>
+  <Capability Min="6" Max="30" Preset="ColorMacro" Res1="#ffffff">All Flash</Capability>
+  <Capability Min="31" Max="55">Auto 1 / Sound 1</Capability>
+  <Capability Min="56" Max="80">Auto 2 / Sound 2</Capability>
+  <Capability Min="81" Max="105">Auto 3 / Sound 3</Capability>
+  <Capability Min="106" Max="130">Auto 4 / Sound 4</Capability>
+  <Capability Min="131" Max="155">Auto 5 / Sound 5</Capability>
+  <Capability Min="156" Max="180">Auto 6 / Sound 6</Capability>
+  <Capability Min="181" Max="205">Auto 7 / Sound 7</Capability>
+  <Capability Min="206" Max="230">Auto 8 / Sound 8</Capability>
+  <Capability Min="231" Max="255">Auto 9 / Sound 9</Capability>
+ </Channel>
+ <Channel Name="Channel_9">
+  <Group Byte="0">Speed</Group>
+  <Capability Min="0" Max="250" Preset="SlowToFast">Strobe / Program Speed</Capability>
+  <Capability Min="251" Max="255">Sound Active</Capability>
+ </Channel>
+ <Mode Name="9-Channel">
+  <Channel Number="0">Red</Channel>
+  <Channel Number="1">Green</Channel>
+  <Channel Number="2">Blue</Channel>
+  <Channel Number="3">UV</Channel>
+  <Channel Number="4">Channel_5</Channel>
+  <Channel Number="5">Channel_6</Channel>
+  <Channel Number="6">Channel_7</Channel>
+  <Channel Number="7">Channel_8</Channel>
+  <Channel Number="8">Channel_9</Channel>
+ </Mode>
+ <Physical>
+  <Bulb Type="LED" Lumens="0" ColourTemperature="0"/>
+  <Dimensions Weight="1.05" Width="245" Height="210" Depth="74"/>
+  <Lens Name="Other" DegreesMin="0" DegreesMax="0"/>
+  <Focus Type="Fixed" PanMax="0" TiltMax="0"/>
+  <Technical PowerConsumption="36" DmxConnector="3-pin"/>
+ </Physical>
+</FixtureDefinition>
