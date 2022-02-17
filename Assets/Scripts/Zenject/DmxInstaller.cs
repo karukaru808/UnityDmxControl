@@ -1,4 +1,4 @@
-using Dmx;
+using DmxControl;
 using UnityEngine;
 
 namespace Zenject
