@@ -24,91 +24,28 @@ using System.Xml.Serialization;
 [System.Xml.Serialization.XmlRootAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition", IsNullable=false)]
 public partial class FixtureDefinition {
     
-    private creatorType creatorField;
-    
-    private string manufacturerField;
-    
-    private string modelField;
-    
-    private typeType typeField;
-    
-    private channelType[] channelField;
-    
-    private modeType[] modeField;
-    
-    private physicalType physicalField;
+    /// <remarks/>
+    public creatorType Creator;
     
     /// <remarks/>
-    public creatorType Creator {
-        get {
-            return this.creatorField;
-        }
-        set {
-            this.creatorField = value;
-        }
-    }
+    public string Manufacturer;
     
     /// <remarks/>
-    public string Manufacturer {
-        get {
-            return this.manufacturerField;
-        }
-        set {
-            this.manufacturerField = value;
-        }
-    }
+    public string Model;
     
     /// <remarks/>
-    public string Model {
-        get {
-            return this.modelField;
-        }
-        set {
-            this.modelField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public typeType Type {
-        get {
-            return this.typeField;
-        }
-        set {
-            this.typeField = value;
-        }
-    }
+    public typeType Type;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Channel")]
-    public channelType[] Channel {
-        get {
-            return this.channelField;
-        }
-        set {
-            this.channelField = value;
-        }
-    }
+    public channelType[] Channel;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Mode")]
-    public modeType[] Mode {
-        get {
-            return this.modeField;
-        }
-        set {
-            this.modeField = value;
-        }
-    }
+    public modeType[] Mode;
     
     /// <remarks/>
-    public physicalType Physical {
-        get {
-            return this.physicalField;
-        }
-        set {
-            this.physicalField = value;
-        }
-    }
+    public physicalType Physical;
 }
 
 /// <remarks/>
@@ -119,41 +56,14 @@ public partial class FixtureDefinition {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class creatorType {
     
-    private string nameField;
-    
-    private string versionField;
-    
-    private string authorField;
+    /// <remarks/>
+    public string Name;
     
     /// <remarks/>
-    public string Name {
-        get {
-            return this.nameField;
-        }
-        set {
-            this.nameField = value;
-        }
-    }
+    public string Version;
     
     /// <remarks/>
-    public string Version {
-        get {
-            return this.versionField;
-        }
-        set {
-            this.versionField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public string Author {
-        get {
-            return this.authorField;
-        }
-        set {
-            this.authorField = value;
-        }
-    }
+    public string Author;
 }
 
 /// <remarks/>
@@ -164,44 +74,17 @@ public partial class creatorType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class modeChannelType {
     
-    private string numberField;
-    
-    private string actsOnField;
-    
-    private string valueField;
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
+    public string Number;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string Number {
-        get {
-            return this.numberField;
-        }
-        set {
-            this.numberField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string ActsOn {
-        get {
-            return this.actsOnField;
-        }
-        set {
-            this.actsOnField = value;
-        }
-    }
+    public string ActsOn;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public string Value {
-        get {
-            return this.valueField;
-        }
-        set {
-            this.valueField = value;
-        }
-    }
+    public string Value;
 }
 
 /// <remarks/>
@@ -212,31 +95,13 @@ public partial class modeChannelType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class technicalType {
     
-    private string powerConsumptionField;
-    
-    private connectorType dmxConnectorField;
-    
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string PowerConsumption {
-        get {
-            return this.powerConsumptionField;
-        }
-        set {
-            this.powerConsumptionField = value;
-        }
-    }
+    public string PowerConsumption;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public connectorType DmxConnector {
-        get {
-            return this.dmxConnectorField;
-        }
-        set {
-            this.dmxConnectorField = value;
-        }
-    }
+    public connectorType DmxConnector;
 }
 
 /// <remarks/>
@@ -284,31 +149,13 @@ public enum connectorType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class layoutType {
     
-    private string widthField;
-    
-    private string heightField;
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
+    public string Width;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
-    public string Width {
-        get {
-            return this.widthField;
-        }
-        set {
-            this.widthField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
-    public string Height {
-        get {
-            return this.heightField;
-        }
-        set {
-            this.heightField = value;
-        }
-    }
+    public string Height;
 }
 
 /// <remarks/>
@@ -319,44 +166,17 @@ public partial class layoutType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class focusType {
     
-    private string typeField;
-    
-    private string panMaxField;
-    
-    private string tiltMaxField;
-    
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Type {
-        get {
-            return this.typeField;
-        }
-        set {
-            this.typeField = value;
-        }
-    }
+    public string Type;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string PanMax {
-        get {
-            return this.panMaxField;
-        }
-        set {
-            this.panMaxField = value;
-        }
-    }
+    public string PanMax;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string TiltMax {
-        get {
-            return this.tiltMaxField;
-        }
-        set {
-            this.tiltMaxField = value;
-        }
-    }
+    public string TiltMax;
 }
 
 /// <remarks/>
@@ -367,57 +187,21 @@ public partial class focusType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class lensType {
     
-    private string nameField;
-    
-    private decimal degreesMinField;
-    
-    private decimal degreesMaxField;
-    
-    private string prismFacesField;
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Name;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Name {
-        get {
-            return this.nameField;
-        }
-        set {
-            this.nameField = value;
-        }
-    }
+    public decimal DegreesMin;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public decimal DegreesMin {
-        get {
-            return this.degreesMinField;
-        }
-        set {
-            this.degreesMinField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public decimal DegreesMax {
-        get {
-            return this.degreesMaxField;
-        }
-        set {
-            this.degreesMaxField = value;
-        }
-    }
+    public decimal DegreesMax;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
-    public string PrismFaces {
-        get {
-            return this.prismFacesField;
-        }
-        set {
-            this.prismFacesField = value;
-        }
-    }
+    public string PrismFaces;
 }
 
 /// <remarks/>
@@ -428,57 +212,21 @@ public partial class lensType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class dimensionsType {
     
-    private string widthField;
-    
-    private string heightField;
-    
-    private string depthField;
-    
-    private decimal weightField;
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
+    public string Width;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
-    public string Width {
-        get {
-            return this.widthField;
-        }
-        set {
-            this.widthField = value;
-        }
-    }
+    public string Height;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
-    public string Height {
-        get {
-            return this.heightField;
-        }
-        set {
-            this.heightField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute(DataType="positiveInteger")]
-    public string Depth {
-        get {
-            return this.depthField;
-        }
-        set {
-            this.depthField = value;
-        }
-    }
+    public string Depth;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public decimal Weight {
-        get {
-            return this.weightField;
-        }
-        set {
-            this.weightField = value;
-        }
-    }
+    public decimal Weight;
 }
 
 /// <remarks/>
@@ -489,44 +237,17 @@ public partial class dimensionsType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class bulbType {
     
-    private string lumensField;
-    
-    private string typeField;
-    
-    private string colourTemperatureField;
-    
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string Lumens {
-        get {
-            return this.lumensField;
-        }
-        set {
-            this.lumensField = value;
-        }
-    }
+    public string Lumens;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Type {
-        get {
-            return this.typeField;
-        }
-        set {
-            this.typeField = value;
-        }
-    }
+    public string Type;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string ColourTemperature {
-        get {
-            return this.colourTemperatureField;
-        }
-        set {
-            this.colourTemperatureField = value;
-        }
-    }
+    public string ColourTemperature;
 }
 
 /// <remarks/>
@@ -537,77 +258,23 @@ public partial class bulbType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class physicalType {
     
-    private bulbType bulbField;
-    
-    private dimensionsType dimensionsField;
-    
-    private lensType lensField;
-    
-    private focusType focusField;
-    
-    private layoutType layoutField;
-    
-    private technicalType technicalField;
+    /// <remarks/>
+    public bulbType Bulb;
     
     /// <remarks/>
-    public bulbType Bulb {
-        get {
-            return this.bulbField;
-        }
-        set {
-            this.bulbField = value;
-        }
-    }
+    public dimensionsType Dimensions;
     
     /// <remarks/>
-    public dimensionsType Dimensions {
-        get {
-            return this.dimensionsField;
-        }
-        set {
-            this.dimensionsField = value;
-        }
-    }
+    public lensType Lens;
     
     /// <remarks/>
-    public lensType Lens {
-        get {
-            return this.lensField;
-        }
-        set {
-            this.lensField = value;
-        }
-    }
+    public focusType Focus;
     
     /// <remarks/>
-    public focusType Focus {
-        get {
-            return this.focusField;
-        }
-        set {
-            this.focusField = value;
-        }
-    }
+    public layoutType Layout;
     
     /// <remarks/>
-    public layoutType Layout {
-        get {
-            return this.layoutField;
-        }
-        set {
-            this.layoutField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public technicalType Technical {
-        get {
-            return this.technicalField;
-        }
-        set {
-            this.technicalField = value;
-        }
-    }
+    public technicalType Technical;
 }
 
 /// <remarks/>
@@ -618,56 +285,20 @@ public partial class physicalType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class modeType {
     
-    private physicalType physicalField;
-    
-    private modeChannelType[] channelField;
-    
-    private string[][] headField;
-    
-    private string nameField;
-    
     /// <remarks/>
-    public physicalType Physical {
-        get {
-            return this.physicalField;
-        }
-        set {
-            this.physicalField = value;
-        }
-    }
+    public physicalType Physical;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Channel")]
-    public modeChannelType[] Channel {
-        get {
-            return this.channelField;
-        }
-        set {
-            this.channelField = value;
-        }
-    }
+    public modeChannelType[] Channel;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlArrayItemAttribute("Channel", typeof(string), DataType="nonNegativeInteger", IsNullable=false)]
-    public string[][] Head {
-        get {
-            return this.headField;
-        }
-        set {
-            this.headField = value;
-        }
-    }
+    public string[] Head;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Name {
-        get {
-            return this.nameField;
-        }
-        set {
-            this.nameField = value;
-        }
-    }
+    public string Name;
 }
 
 /// <remarks/>
@@ -678,44 +309,17 @@ public partial class modeType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class aliasType {
     
-    private string modeField;
-    
-    private string channelField;
-    
-    private string withField;
+    /// <remarks/>
+    [System.Xml.Serialization.XmlAttributeAttribute()]
+    public string Mode;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Mode {
-        get {
-            return this.modeField;
-        }
-        set {
-            this.modeField = value;
-        }
-    }
+    public string Channel;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Channel {
-        get {
-            return this.channelField;
-        }
-        set {
-            this.channelField = value;
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string With {
-        get {
-            return this.withField;
-        }
-        set {
-            this.withField = value;
-        }
-    }
+    public string With;
 }
 
 /// <remarks/>
@@ -726,148 +330,49 @@ public partial class aliasType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class capabilityType {
     
-    private aliasType[] aliasField;
-    
-    private string[] textField;
-    
-    private string minField;
-    
-    private string maxField;
-    
-    private capabilityPresetType presetField;
-    
-    private bool presetFieldSpecified;
-    
-    private string res1Field;
-    
-    private string res2Field;
-    
-    private string resField;
-    
-    private string colorField;
-    
-    private string color2Field;
-    
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Alias")]
-    public aliasType[] Alias {
-        get {
-            return this.aliasField;
-        }
-        set {
-            this.aliasField = value;
-        }
-    }
+    public aliasType[] Alias;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public string[] Text {
-        get {
-            return this.textField;
-        }
-        set {
-            this.textField = value;
-        }
-    }
+    public string[] Text;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string Min {
-        get {
-            return this.minField;
-        }
-        set {
-            this.minField = value;
-        }
-    }
+    public string Min;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string Max {
-        get {
-            return this.maxField;
-        }
-        set {
-            this.maxField = value;
-        }
-    }
+    public string Max;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public capabilityPresetType Preset {
-        get {
-            return this.presetField;
-        }
-        set {
-            this.presetField = value;
-        }
-    }
+    public capabilityPresetType Preset;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool PresetSpecified {
-        get {
-            return this.presetFieldSpecified;
-        }
-        set {
-            this.presetFieldSpecified = value;
-        }
-    }
+    public bool PresetSpecified;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Res1 {
-        get {
-            return this.res1Field;
-        }
-        set {
-            this.res1Field = value;
-        }
-    }
+    public string Res1;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Res2 {
-        get {
-            return this.res2Field;
-        }
-        set {
-            this.res2Field = value;
-        }
-    }
+    public string Res2;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Res {
-        get {
-            return this.resField;
-        }
-        set {
-            this.resField = value;
-        }
-    }
+    public string Res;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Color {
-        get {
-            return this.colorField;
-        }
-        set {
-            this.colorField = value;
-        }
-    }
+    public string Color;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Color2 {
-        get {
-            return this.color2Field;
-        }
-        set {
-            this.color2Field = value;
-        }
-    }
+    public string Color2;
 }
 
 /// <remarks/>
@@ -1077,31 +582,13 @@ public enum capabilityPresetType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class groupType {
     
-    private string byteField;
-    
-    private groupEnumType valueField;
-    
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string Byte {
-        get {
-            return this.byteField;
-        }
-        set {
-            this.byteField = value;
-        }
-    }
+    public string Byte;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlTextAttribute()]
-    public groupEnumType Value {
-        get {
-            return this.valueField;
-        }
-        set {
-            this.valueField = value;
-        }
-    }
+    public groupEnumType Value;
 }
 
 /// <remarks/>
@@ -1155,107 +642,35 @@ public enum groupEnumType {
 [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://www.qlcplus.org/FixtureDefinition")]
 public partial class channelType {
     
-    private groupType groupField;
-    
-    private colorType colourField;
-    
-    private bool colourFieldSpecified;
-    
-    private capabilityType[] capabilityField;
-    
-    private string nameField;
-    
-    private string defaultField;
-    
-    private channelPresetType presetField;
-    
-    private bool presetFieldSpecified;
+    /// <remarks/>
+    public groupType Group;
     
     /// <remarks/>
-    public groupType Group {
-        get {
-            return this.groupField;
-        }
-        set {
-            this.groupField = value;
-        }
-    }
-    
-    /// <remarks/>
-    public colorType Colour {
-        get {
-            return this.colourField;
-        }
-        set {
-            this.colourField = value;
-        }
-    }
+    public colorType Colour;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool ColourSpecified {
-        get {
-            return this.colourFieldSpecified;
-        }
-        set {
-            this.colourFieldSpecified = value;
-        }
-    }
+    public bool ColourSpecified;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Capability")]
-    public capabilityType[] Capability {
-        get {
-            return this.capabilityField;
-        }
-        set {
-            this.capabilityField = value;
-        }
-    }
+    public capabilityType[] Capability;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public string Name {
-        get {
-            return this.nameField;
-        }
-        set {
-            this.nameField = value;
-        }
-    }
+    public string Name;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute(DataType="nonNegativeInteger")]
-    public string Default {
-        get {
-            return this.defaultField;
-        }
-        set {
-            this.defaultField = value;
-        }
-    }
+    public string Default;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
-    public channelPresetType Preset {
-        get {
-            return this.presetField;
-        }
-        set {
-            this.presetField = value;
-        }
-    }
+    public channelPresetType Preset;
     
     /// <remarks/>
     [System.Xml.Serialization.XmlIgnoreAttribute()]
-    public bool PresetSpecified {
-        get {
-            return this.presetFieldSpecified;
-        }
-        set {
-            this.presetFieldSpecified = value;
-        }
-    }
+    public bool PresetSpecified;
 }
 
 /// <remarks/>
